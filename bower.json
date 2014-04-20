@@ -1,0 +1,15 @@
+{
+  "name": "polymer-spike",
+  "version": "0.0.0",
+  "authors": [
+    "Ben Sayers <bpsayers@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "polymer": "~0.2.2",
+    "core-elements": "Polymer/core-elements#~0.2.3",
+    "polymer-elements": "Polymer/polymer-elements#~0.2.3",
+    "polymer-ui-elements": "Polymer/polymer-ui-elements#~0.2.3"
+  }
+}

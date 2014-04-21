@@ -2,21 +2,15 @@
 <html>
   <head>
     <script src="bower_components/platform/platform.js"></script>
-    <link rel="import" href="bower_components/polymer-ajax/polymer-ajax.html">
+    <link rel="import" href="elements/my-element.html">
   </head>
   <body>
-    <polymer-ajax url="example.json" handleAs="json"></polymer-ajax>
+    <my-element id="element-1"></my-element>
+    <my-element id="element-2" name="Name 2"></my-element>
+    <my-element id="element-3"></my-element>
 
     <script>
-      window.addEventListener('polymer-ready', function(e) {
-        var ajax = document.querySelector('polymer-ajax');
-
-        ajax.addEventListener('polymer-response', function(e) {
-          console.log(this.response);
-        });
-
-        ajax.go();
-      });
+        document.querySelector('#element-3').name = 'Name 3'
     </script>
   </body>
 </html>

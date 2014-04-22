@@ -1,0 +1,20 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="my-close-button">
+    <template>
+        <style>
+            #close {
+                cursor: pointer;
+                font-family: arial, sans-serif;
+            }
+        </style>
+        <div id="close" on-click="{{onClick}}">X</div>
+    </template>
+    <script>
+        Polymer('my-close-button', {
+            onClick: function () {
+                this.fire('close-click');
+            }
+        });
+    </script>
+</polymer-element>

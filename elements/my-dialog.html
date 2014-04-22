@@ -1,0 +1,54 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="my-close-button.html">
+
+<polymer-element name="my-dialog">
+    <template>
+        <style>
+            #dialog {
+                border: 1px solid black;
+                font-family: arial, sans-serif;
+                display: inline-block;
+                padding: 10px;
+                margin: 10px;
+                width: 500px;
+            }
+
+            header {
+                border-bottom: 1px solid black;
+                padding: 10px 0;
+                position: relative;
+                text-align: center;
+            }
+
+            #title {
+                font-weight: bold;
+            }
+
+            section {
+
+            }
+
+            my-close-button {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+        </style>
+        <div id="dialog">
+            <header>
+                <span id="title">Dialog</span>
+                <my-close-button on-close-click="{{closeClick}}"></my-close-button>
+            </header>
+            <section>
+                <content></content>
+            </section>
+        </div>
+    </template>
+    <script>
+        Polymer('my-dialog', {
+            closeClick: function () {
+                $(this.$.dialog).hide();
+            }
+        });
+    </script>
+</polymer-element>
